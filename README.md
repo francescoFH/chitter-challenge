@@ -2,6 +2,24 @@ Chitter Challenge
 ====
 Write a Twitter clone.
 
+Instructions
+---
+### Project Setup
+```
+$ git clone https://github.com/francescoFH/chitter-challenge
+$ bundle
+```
+### Database Setup
+```
+$ psql
+CREATE DATABASE chitter;
+CREATE DATABASE chitter_test;
+```
+### To run the app
+```
+$ rackup -p 3000
+```
+Then in your browser navigate to `localhost:3000/chitter`
 
 User Stories
 ---
@@ -44,7 +62,7 @@ I want to receive an email if I am tagged in a Peep
 
 Tech Stack
 ---
-Ruby 2.6.5
-RSpec
-Sinatra
-PostreSQL
+- Ruby 2.6.5
+- RSpec
+- Sinatra
+- PostreSQL

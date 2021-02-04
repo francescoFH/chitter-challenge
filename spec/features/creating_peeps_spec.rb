@@ -1,10 +1,10 @@
-feature 'Creating Peeps' do
-  scenario 'As an user, I can post a new Peep' do
+feature 'Posting a new Peep' do
+  scenario 'As an User, I can post a new Peep' do
     visit '/peeps/new'
 
-    fill_in :peep, with: 'This is a new Peep'
-    click_button "Post"
+    fill_in "What's happening?", with: "This is my test peep"
+    click_button "Peep"
 
-    expect(page).to have_content 'This is a new Peep'
+    expect(page).to have_content "This is my test peep"
   end
 end

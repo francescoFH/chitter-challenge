@@ -1,11 +1,14 @@
 <link rel="stylesheet" href="/style.css"/>
 <h1>Chitter</h1>
 <br>
+<form action="peeps/new" method="get">
+  <input type="submit" value="Make a Peep">
+</form>
+<br>
 <% @peeps.each do |peep| %>
-<h3> <%= peep.post %> | <%= peep.time %> </h3>
+<h4> <%= peep.post %> | <%= peep.time %> </h4>
 <br>
 <% end %>
-</ul>
 <footer>
  Chitter2021 | francescoFH | Makers 2020
 </footer>

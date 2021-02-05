@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.6.5'
 gem 'capybara'
 gem 'sinatra'
+gem 'pg'
 
 group :test do
   gem 'rspec'

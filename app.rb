@@ -19,9 +19,7 @@ class Chitter < Sinatra::Base
   end
 
   post '/peeps' do
-    @peep = params[:"What's happening?"]
-    session[:peep] = @peep
-    Peep.create(peep: params[:"What's happening?"])
+    Peep.create(post: params[:peep])
     redirect '/peeps'
   end
 

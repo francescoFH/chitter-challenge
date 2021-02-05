@@ -7,18 +7,11 @@ feature 'Viewing Peeps' do
   end
 
   feature 'viewing Peeps' do
-    before do
-      visit '/peeps/new'
-      fill_in "What's happening?", with: "Might be a Peep here"
-      click_button "Peep"
-    end
-
     scenario 'As an user, I can see the Peeps' do
-
+      Peep.create(post: "This is a peep!")
       visit '/peeps'
 
-      expect(page).to have_content 'Might be a Peep here'
-
+      expect(page).to have_content 'This is a peep'
     end
   end
 end

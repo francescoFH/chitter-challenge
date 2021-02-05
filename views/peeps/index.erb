@@ -1,7 +1,11 @@
+<link rel="stylesheet" href="/style.css"/>
 <h1>Chitter</h1>
-
-<ul>
-  <% @peeps.each do |peep| %>
-    <li> <%= peep %> </li>
-  <% end %>
+<br>
+<% @peeps.each do |peep| %>
+<h3> <%= peep.post %> | <%= peep.time %> </h3>
+<br>
+<% end %>
 </ul>
+<footer>
+ Chitter2021 | francescoFH | Makers 2020
+</footer>

@@ -2,10 +2,11 @@
 <h1>Create your account:</h1>
 <br>
 <form action="/user" method="post">
-  <input required type="text" name="username" placeholder="Username" /><br><br>
-  <input required type="email" name="email" placeholder="Enter email" /><br><br>
-  <input minlength="5" required type="password" name="password" placeholder="Enter password"><br><br>
-  <input required type="password" name="password confirmation" placeholder="Confirm the password"><br><br>
+  <input required type="text" name="handle" placeholder="Handle" maxlength="60" /><br><br>
+  <input required type="text" name="name" placeholder="Name" maxlength="60" /><br><br>
+  <input required type="email" name="email" placeholder="Enter email" maxlength="60" /><br><br>
+  <input minlength="5" required type="password" name="password" placeholder="Enter password" maxlength="140" ><br><br>
+  <input required type="password" name="password confirmation" placeholder="Confirm the password" maxlength="140" ><br><br>
   <input type="submit" class="button" value="Sign Up" />
 </form>
 <br>

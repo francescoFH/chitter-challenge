@@ -3,11 +3,20 @@
 <br>
 <% if @user %>
   <h3>Hello <%= @user.handle %></h3>
+  <form action="peeps/new" method="get">
+    <input type="submit" value="Make a Peep">
+  </form>
+  <form action="sessions/destory" method="post">
+    <input type="submit" value="Sign Out">
+  </form>
 <% end %>
+<h3> <%= flash[:notice] %> </h3>
 <br>
-<form action="peeps/new" method="get">
-  <input type="submit" value="Make a Peep">
+<% if !@user %>
+<form action="sessions/new" method="get">
+  <input type="submit" value="Sign In">
 </form>
+<% end %>
 <br>
 <% @peeps.each do |peep| %>
 <h4> <%= peep.post %> | <%= peep.time %> </h4>

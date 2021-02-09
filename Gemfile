@@ -4,6 +4,7 @@ ruby '2.6.5'
 gem 'capybara'
 gem 'pg'
 gem 'sinatra'
+gem 'bcrypt'
 
 group :test do
   gem 'rspec'

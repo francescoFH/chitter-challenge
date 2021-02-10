@@ -1,14 +1,21 @@
-<link rel="stylesheet" href="/style.css"/>
-<h1>Sign In:</h1>
-<br>
-<h3> <%= flash[:notice] %> </h3>
-<br>
-<form action="/sessions" method="post">
-  <input required type="email" name="email" placeholder="Enter email" maxlength="60" /><br><br>
-  <input minlength="5" required type="password" name="password" placeholder="Enter password" maxlength="140" ><br><br>
-  <input type="submit" class="button" value="Sign In" />
-</form>
-<br>
-<footer>
- Chitter2021 | francescoFH | Makers 2020
-</footer>
+<head>
+  <title>Chitter</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <h1>Chitter</h1>
+  <br>
+  <h2>Sign In</h2>
+  <br>
+  <h3> <%= flash[:notice] %> </h3>
+  <br>
+  <form action="/sessions" method="post">
+    <input required type="email" name="email" placeholder="Enter email" maxlength="60" /><br><br>
+    <input minlength="5" required type="password" name="password" placeholder="Enter password" maxlength="140" ><br><br>
+    <input type="submit" class="button" value="Sign In" />
+  </form>
+  <br>
+  <footer>
+   Chitter2021 | francescoFH | Makers 2020
+  </footer>
+</body>

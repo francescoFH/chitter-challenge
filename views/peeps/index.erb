@@ -8,20 +8,21 @@
   <% if @user %>
     <h3>Hello <handle><%= @user.handle %></handle></h3>
     <form action="peeps/new" method="get">
-      <input type="submit" value="Make a Peep">
+      <input type="submit" class="button" value="Make a Peep">
     </form>
     <form action="sessions/destory" method="post">
-      <input type="submit" value="Sign Out">
+      <input type="submit" class="button" value="Sign Out">
     </form>
   <% end %>
   <h3> <%= flash[:notice] %> </h3>
   <br>
   <% if !@user %>
   <form action="sessions/new" method="get">
-    <input type="submit" value="Sign In">
+    <input type="submit" class="button" value="Sign In">
   </form>
-  <form action="/user/new" method=get>
-    <input type="submit" value="Sign Up">
+  <form action="/users/new" method=get>
+  <label><h3>New to Chitter?</h3></label>
+    <input type="submit" class="button" value="Sign Up">
   </form>
   <% end %>
   <hr class="solid">

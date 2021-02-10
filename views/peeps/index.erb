@@ -3,9 +3,13 @@
   <link rel="stylesheet" href="/style.css"/>
 </head>
 <body>
-  <h1>Chitter</h1>
-  <br>
+  <h1>Chitter 🐦</h1>
   <% if @user %>
+    <style>
+    handle {
+      color: #008B8B;
+    }
+    </style>
     <h3>Hello <handle><%= @user.handle %></handle></h3>
     <form action="peeps/new" method="get">
       <input type="submit" class="button" value="Make a Peep">
@@ -17,19 +21,30 @@
   <h3> <%= flash[:notice] %> </h3>
   <br>
   <% if !@user %>
-  <form action="sessions/new" method="get">
-    <input type="submit" class="button" value="Sign In">
-  </form>
-  <form action="/users/new" method=get>
-  <label><h3>New to Chitter?</h3></label>
-    <input type="submit" class="button" value="Sign Up">
-  </form>
+    <style>
+      form { display: inline; }
+    </style>
+    <label>
+      <h2>Happening Now</h2>
+      <h3>Join Chitter today</h3>
+    </label>
+    <form action="sessions/new" method="get">
+      <input type="submit" class="button" value="Sign In">
+    </form>
+    <form action="/user/new" method=get>
+      <input type="submit" class="button" value="Sign Up">
+    </form>
   <% end %>
   <hr class="solid">
   <br>
   <% @peeps.each do |peep| %>
-  <h4> <b><%= peep.poster_name %></b> <info><%= peep.poster%> • <%= peep.time %></info> <br><br> <%= peep.post %>  </h4>
-  <br>
+    <style>
+      info {
+        color: #008B8B;
+      }
+    </style>
+    <h4> <b><%= peep.poster_name %></b> <info><%= peep.poster%> • <%= peep.time %></info> <br><br> <%= peep.post %>  </h4>
+    <br>
   <% end %>
   <footer>
    Chitter2021 | francescoFH | Makers 2020

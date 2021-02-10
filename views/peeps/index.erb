@@ -1,27 +1,36 @@
-<link rel="stylesheet" href="/style.css"/>
-<h1>Chitter</h1>
-<br>
-<% if @user %>
-  <h3>Hello <%= @user.handle %></h3>
-  <form action="peeps/new" method="get">
-    <input type="submit" value="Make a Peep">
+<head>
+  <title>Chitter</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <h1>Chitter</h1>
+  <br>
+  <% if @user %>
+    <h3>Hello <handle><%= @user.handle %></handle></h3>
+    <form action="peeps/new" method="get">
+      <input type="submit" value="Make a Peep">
+    </form>
+    <form action="sessions/destory" method="post">
+      <input type="submit" value="Sign Out">
+    </form>
+  <% end %>
+  <h3> <%= flash[:notice] %> </h3>
+  <br>
+  <% if !@user %>
+  <form action="sessions/new" method="get">
+    <input type="submit" value="Sign In">
   </form>
-  <form action="sessions/destory" method="post">
-    <input type="submit" value="Sign Out">
+  <form action="/user/new" method=get>
+    <input type="submit" value="Sign Up">
   </form>
-<% end %>
-<h3> <%= flash[:notice] %> </h3>
-<br>
-<% if !@user %>
-<form action="sessions/new" method="get">
-  <input type="submit" value="Sign In">
-</form>
-<% end %>
-<br>
-<% @peeps.each do |peep| %>
-<h4> <%= peep.post %> | <%= peep.time %> </h4>
-<br>
-<% end %>
+  <% end %>
+  <hr class="solid">
+  <br>
+  <% @peeps.each do |peep| %>
+  <h4> <b><%= peep.poster_name %></b> <info><%= peep.poster%> • <%= peep.time %></info> <br><br> <%= peep.post %>  </h4>
+  <br>
+  <% end %>
+</body>
 <footer>
  Chitter2021 | francescoFH | Makers 2020
 </footer>

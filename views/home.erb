@@ -3,16 +3,18 @@
   <link rel="stylesheet" href="/style.css"/>
 </head>
 <body>
-  <h1>Welcome to Chitter</h1>
-  <p>
-      🔎 Follow your interests<br><br>
-      👥 Hear what people are talking about<br><br>
-      💬 Join the conversation<br><br>
-  </p>
-  <a href="/peeps">See what's going on</a>
-  <a href="/user/new">Sign Up</a>
-  <a href="/sessions/new">Log In</a>
+  <h1>Welcome to Chitter 🐦</h1>
+  <br>
+  <form action="/peeps" method="get">
+    <input type="submit" class="button" value="See what's going on"/>
+  </form>
+  <form action="/user/new" method="get">
+    <input type="submit" class="button" value="Sign Up"/>
+  </form>
+  <form action="/sessions/new" method="get">
+    <input type="submit" class="button" value="Sign In"/>
+  </form>
+  <footer>
+   Chitter2021 | francescoFH | Makers 2020
+  </footer>
 </body>
-<footer>
- Chitter2021 | francescoFH | Makers 2020
-</footer>

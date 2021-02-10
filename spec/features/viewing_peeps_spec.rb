@@ -8,7 +8,7 @@ feature 'Viewing Peeps' do
 
   feature 'viewing Peeps' do
     scenario 'As an user, I can see the Peeps' do
-      Peep.create(post: "This is a peep!")
+      Peep.create(post: "This is a peep!", poster: '@tester', poster_name: 'Mr Test')
       visit '/peeps'
 
       expect(page).to have_content 'This is a peep'

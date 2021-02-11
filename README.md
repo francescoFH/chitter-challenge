@@ -1,6 +1,6 @@
 Chitter Challenge
 ====
-Write a Twitter clone.
+Twitter clone that allow the user to post messages to a public stream
 
 Instructions
 ---

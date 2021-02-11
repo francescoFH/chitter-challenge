@@ -15,11 +15,28 @@ $ psql
 CREATE DATABASE chitter;
 CREATE DATABASE chitter_test;
 ```
+run the SQL scripts in the `db/migrations` folder.
+
 ### To run the app
 ```
 $ rackup -p 3000
 ```
 Then in your browser navigate to `localhost:3000/chitter`
+
+Interface
+---
+**Home page:**
+![Home page screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/homepage.png)<br><br>
+**Sign up:**
+![Sign up screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/sign-up.png)<br><br>
+**Making a peep:**
+![Making a peep screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/make-peep.png)<br><br>
+**Viewing peeps**
+![Viewing peeps screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/viewing-peep.png)<br><br>
+**Sign out:**
+![sign out screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/signout.png)<br><br>
+**Incorrect email/password message:**
+![Failed sign in screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/wrong-signin.png)
 
 User Stories
 ---

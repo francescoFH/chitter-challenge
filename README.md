@@ -19,9 +19,9 @@ run the SQL scripts in the `db/migrations` folder.
 
 ### To run the app
 ```
-$ rackup -p 3000
+$ rackup
 ```
-Then in your browser navigate to `localhost:3000/chitter`
+Then in your browser navigate to `localhost:9292`
 
 Interface
 ---

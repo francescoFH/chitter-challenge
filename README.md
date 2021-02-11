@@ -28,7 +28,7 @@ Interface
 **Home page:**
 ![Home page screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/homepage.png)<br><br>
 **Sign up:**
-![Sign up screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/sign-up.png)<br><br>
+![Sign up screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/signup.png)<br><br>
 **Making a peep:**
 ![Making a peep screenshot](https://github.com/francescoFH/chitter-challenge/blob/master/images/make-peep.png)<br><br>
 **Viewing peeps**
